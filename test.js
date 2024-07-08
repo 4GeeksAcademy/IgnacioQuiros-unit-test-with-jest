@@ -7,11 +7,11 @@ test("One euro should be 1.07 dollars", function() {
 test("One Dollar should be 156.5 Yens", function() {
     const { fromDollarToYen } = require('./app.js');
     const Yens = fromDollarToYen(3.5);
-    const expected = 3.5 * 156.5;
-    expect(fromDollarToYen(3.5)).toBe(547.75); })
+    const expected = 3.5 * 156.5 / 1.07 ;
+    expect(fromDollarToYen(3.5)).toBe(511.91588785046724); })
 
 test("One Yen should be 0.87 Pounds", function() {
     const { fromYenToPound } = require('./app.js');
     const Pounds = fromYenToPound(3.5);
-    const expected = 3.5 * 0.87;
-    expect(fromYenToPound(3.5)).toBe(3.045); })
+    const expected = 3.5 * 0.87 / 156.5;
+    expect(fromYenToPound(3.5)).toBe(0.019456869009584665); })

@@ -3,11 +3,11 @@ let fromEuroToDollar = function (valueInEuro){
     return euroValue;
 }
 let fromDollarToYen = function (valueInDollar){
-    let euroValue = valueInDollar * 156.5;
+    let euroValue = valueInDollar * 156.5 / 1.07;
     return euroValue;
 }
 let fromYenToPound = function (valueInYen){
-    let euroValue = valueInYen * 0.87;
+    let euroValue = valueInYen * 0.87 /156.5;
     return euroValue;
 }
 
